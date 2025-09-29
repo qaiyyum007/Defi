@@ -66,6 +66,7 @@ Mapping to track pending rewards for each user
     }
     
     // EARNED: Calculate how much reward user has earned
+    // Earned Rewards = (User's Stake × Reward Index Delta) ÷ Precision + Pending Rewards
     function earned(address account) public view returns (uint256) {
         return ((stakedBalance[account] * 
                 (rewardPerToken() - userRewardPerTokenPaid[account])) / 1e18) 
