@@ -50,6 +50,12 @@ Mapping to track pending rewards for each user
     }
     
     // REWARD CALCULATION: How much reward per staked token
+
+    // Updates global reward accumulation
+    // Updates individual user rewards before state-changing operations
+    // Handles zero address for cases where no specific account update is needed
+
+
     function rewardPerToken() public view returns (uint256) {
         if (totalStaked == 0) {
             return rewardPerTokenStored;
