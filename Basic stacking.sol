@@ -56,7 +56,7 @@ Mapping to track pending rewards for each user
     // rewardPerToken = how many rewards each staked token has earned in total so far.
     // userRewardPerTokenPaid[account] = how many rewards per token this user has already been credited for.
 
-
+    // New Rewards = (Time Elapsed × Reward Rate × Precision) ÷ Total Staked
     function rewardPerToken() public view returns (uint256) {
         if (totalStaked == 0) {
             return rewardPerTokenStored;
