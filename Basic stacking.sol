@@ -16,7 +16,7 @@ contract BasicStaking {
     Fixed reward rate (1 token/second, using 18 decimals)
     Last time rewards were updated
     Accumulated rewards per token stored
-     Mapping to track each user's last reward checkpoint
+    Mapping to track each user's last reward checkpoint
 
 Mapping to track pending rewards for each user
     uint256 public rewardRate = 1e18; // 1 token per second
