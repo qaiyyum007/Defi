@@ -53,6 +53,8 @@ Mapping to track pending rewards for each user
     // Updates global reward accumulation
     // Updates individual user rewards before state-changing operations
     // Handles zero address for cases where no specific account update is needed
+    // rewardPerToken = how many rewards each staked token has earned in total so far.
+    // userRewardPerTokenPaid[account] = how many rewards per token this user has already been credited for.
 
 
     function rewardPerToken() public view returns (uint256) {
