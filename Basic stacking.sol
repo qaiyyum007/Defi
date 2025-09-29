@@ -60,6 +60,7 @@ Mapping to track pending rewards for each user
         if (totalStaked == 0) {
             return rewardPerTokenStored;
         }
+    // New Rewards = (Time Elapsed × Reward Rate × Precision) ÷ Total Staked
         return rewardPerTokenStored + 
             ((block.timestamp - lastUpdateTime) * rewardRate * 1e18) / totalStaked;
     }
